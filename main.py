@@ -42,8 +42,15 @@ def getTime():
 
 @bot.command()
 async def ndl(ctx):
-    time = getTime()
-    await ctx.send(time)
+    author = ctx.message.author.mention
+    print(author)
+    if author == "<@395583276175196160>":
+        await ctx.send(
+            "Frr arrete de spam, t'es chiant avec ta nuit de l'info à la con"
+        )
+    else:
+        time = getTime()
+        await ctx.send(time)
 
 
 load_dotenv()
